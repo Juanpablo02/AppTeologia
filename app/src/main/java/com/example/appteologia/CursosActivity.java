@@ -37,4 +37,9 @@ public class CursosActivity extends AppCompatActivity {
         Intent intent = new Intent(this,OracionActivity.class);
         startActivity(intent);
     }
+
+    public void cursos(View view){
+        Intent intent = new Intent(this, DialogActivity.class);
+        startActivity(intent);
+    }
 }

@@ -16,14 +16,15 @@
         <activity
             android:name=".DialogActivity"
             android:exported="false"
-            android:label="@string/title_activity_dialog"
-            android:theme="@style/Theme.AppTeologia.NoActionBar" />
+            android:theme="@android:style/Theme.Holo.Dialog"/>
         <activity
             android:name=".ProfileActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppTeologia"/>
         <activity
             android:name=".CursosActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppTeologia"/>
         <activity
             android:name=".PrincipalActivity"
             android:exported="false"

@@ -97,6 +97,7 @@
                         android:paddingRight="30dp"
                         android:paddingBottom="10dp"
                         android:text="Ver más"
+                        android:onClick="cursos"
                         android:textColor="@color/colorButtonPrincipal"
                         app:cornerRadius="40dp" />
                 </LinearLayout>
