@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menuPefil"
+        android:icon="@drawable/casa"
+        android:title="Inicio"/>
+
+    <item
+        android:id="@+id/menuAgregarOracion"
+        android:icon="@drawable/casa"
+        android:title="Inicio"/>
+
+    <item
+        android:id="@+id/menuAgendarCita"
+        android:icon="@drawable/casa"
+        android:title="Inicio"/>
+
+    <item
+        android:id="@+id/menuCursos"
+        android:icon="@drawable/casa"
+        android:title="Inicio"/>
+
+    <item
+        android:id="@+id/menuPostGrados"
+        android:icon="@drawable/casa"
+        android:title="Inicio"/>
+    <item
+        android:id="@+id/menuCerrarSesion"
+        android:icon="@drawable/casa"
+        android:title="Inicio"/>
+
+</menu>
