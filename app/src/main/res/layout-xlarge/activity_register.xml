@@ -18,14 +18,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2" />
+        app:layout_constraintGuide_percent="0.23" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.85" />
+        app:layout_constraintGuide_percent="0.83" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline9"
@@ -37,6 +37,7 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
@@ -48,10 +49,9 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:text="Iniciar Sesión Con"
             android:textColor="@color/white"
-            android:textSize="14sp" />
+            android:textSize="18sp" />
 
         <LinearLayout
             android:id="@+id/linearLayout2"
@@ -64,8 +64,8 @@
 
             <ImageView
                 android:id="@+id/imageView4"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_weight="1"
                 android:maxWidth="60dp"
                 android:maxHeight="60dp"
@@ -73,8 +73,8 @@
 
             <ImageView
                 android:id="@+id/imageView5"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_weight="1"
                 android:maxWidth="60dp"
                 android:maxHeight="60dp"
@@ -101,10 +101,10 @@
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="40dp"
             android:text="Registro"
             android:textColor="@color/white"
-            android:textSize="24sp" />
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/textView18"
@@ -112,7 +112,7 @@
             android:layout_height="wrap_content"
             android:text="Usuario"
             android:textColor="@color/white"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/etUser"
@@ -120,7 +120,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -134,7 +134,7 @@
                 android:layout_weight="1"
                 android:text="Nombre"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -143,7 +143,7 @@
                 android:layout_weight="1"
                 android:text="Apellido"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -161,7 +161,7 @@
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/etLastName"
@@ -172,7 +172,7 @@
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -187,7 +187,7 @@
                 android:layout_weight="1"
                 android:text="Email"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView8"
@@ -196,7 +196,7 @@
                 android:layout_weight="1"
                 android:text="Teléfono"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -212,7 +212,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="textEmailAddress"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/etTelefono"
@@ -223,7 +223,7 @@
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
         </LinearLayout>
 
 
@@ -233,7 +233,7 @@
             android:layout_height="wrap_content"
             android:text="Contraseña"
             android:textColor="@color/white"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/etPassword"
@@ -243,7 +243,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textView5"
@@ -251,7 +251,7 @@
             android:layout_height="wrap_content"
             android:text="Confirmar Contraseña"
             android:textColor="@color/white"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/etConfirmPassword"
@@ -260,20 +260,21 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/btnRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
             android:backgroundTint="@color/roundButton"
             android:onClick="ejecutarServicio"
-            android:paddingLeft="20dp"
-            android:paddingTop="5dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="5dp"
+            android:paddingLeft="30dp"
+            android:paddingTop="10dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="10dp"
             android:text="Registrar"
-            android:textSize="14sp"
+            android:textSize="20sp"
             app:cornerRadius="20dp" />
 
     </LinearLayout>
@@ -282,7 +283,7 @@
         android:id="@+id/linearLayout11"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginRight="35dp"
+        android:layout_marginRight="50dp"
         android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toEndOf="parent"
@@ -297,8 +298,9 @@
 
             <ImageView
                 android:id="@+id/imageView14"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="5dp"
                 android:onClick="registerToLogin"
                 android:paddingLeft="5dp"
                 app:srcCompat="@drawable/atras" />
@@ -308,7 +310,7 @@
             android:id="@+id/imageView2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/logo" />
 
@@ -316,7 +318,7 @@
             android:id="@+id/ImgSantoTomas"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/ustablanco" />
 

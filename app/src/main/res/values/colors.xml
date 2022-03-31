@@ -21,4 +21,6 @@
     <color name="colorWhite">#fffff0</color>
     <color name="colorwh">#fffff0</color>
     <color name="colorButtonPrincipal">#ffc604</color>
+    <color name="transparent">#00FFFFFF</color>
+
 </resources>

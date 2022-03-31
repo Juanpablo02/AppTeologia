@@ -2,6 +2,7 @@ package com.example.appteologia;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -24,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
     EditText etLoginUser, etLoginPassword;
     Button btnLogin;
-
-    String url = "http://172.23.2.78/servicios/login.php";
+    String url = "https://juanpablo02.000webhostapp.com/crud/login.php";
+    String str_email,str_password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +35,56 @@ public class MainActivity extends AppCompatActivity {
         etLoginUser = findViewById(R.id.etLoginUser);
         etLoginPassword = findViewById(R.id.etLoginPassword);
         btnLogin = findViewById(R.id.btnLogin);
-
     }
 
-    public void validarUsuario(View view){
-        StringRequest stringRequest=new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+    public void Login(View view){
+
+        final String strUser = etLoginUser.getText().toString().trim();
+        final String strPassword = etLoginPassword.getText().toString().trim();
+
+        if(strUser.isEmpty()){
+            Toast.makeText(this, "Ingrese el Usuario o Correo Electronico", Toast.LENGTH_SHORT).show();
+        } else if(strPassword.isEmpty()){
+            Toast.makeText(this, "Ingrese la Contraseña", Toast.LENGTH_SHORT).show();
+        } else {
+            final ProgressDialog progressDialog = new ProgressDialog(this);
+            progressDialog.setMessage("Porfavor Espere...");
+            progressDialog.show();
+
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, "https://juanpablo02.000webhostapp.com/crud/login.php", new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    progressDialog.dismiss();
+                    if (response.equalsIgnoreCase("Ingreso Correctamente")) {
+                        startActivity(new Intent(getApplicationContext(), PrincipalActivity.class));
+                        Toast.makeText(MainActivity.this, response, Toast.LENGTH_SHORT).show();
+                        finish();
+                    } else {
+                        Toast.makeText(MainActivity.this, response, Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    progressDialog.dismiss();
+                    Toast.makeText(MainActivity.this,error.getMessage().toString(), Toast.LENGTH_SHORT).show();
+                }
+            }){
+                protected Map<String, String> getParams() throws AuthFailureError{
+                    Map<String,String> params = new HashMap<>();
+                    params.put("usuario",etLoginUser.getText().toString());
+                    params.put("password",etLoginPassword.getText().toString());
+
+                    return params;
+                }
+            };
+            RequestQueue requestQueue = Volley.newRequestQueue(this);
+            requestQueue.add(stringRequest);
+        }
+    }
+
+    /*public void validarUsuario(View view){
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 if(!response.isEmpty()){
@@ -68,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
         RequestQueue queue = Volley.newRequestQueue( MainActivity.this);
         queue.add(stringRequest);
 
-    }
+    }*/
 
     public void loginToRegister(View view){
         Intent intent = new Intent(this,RegisterActivity.class);

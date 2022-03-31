@@ -2,8 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.appteologia">
 
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -13,10 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppTeologia"
         android:usesCleartextTraffic="true">
-        <activity
-            android:name=".DialogActivity"
-            android:exported="false"
-            android:theme="@android:style/Theme.Holo.Dialog"/>
         <activity
             android:name=".ProfileActivity"
             android:exported="false"

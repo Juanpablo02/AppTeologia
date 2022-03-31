@@ -1,113 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/gradient"
-    tools:context=".dialogos.DialogoCursosFragment">
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline28"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" />
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_dialog_cursos"
+    android:elevation="10dp"
+    android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/barraSuperior"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/backgrounf"
-        android:elevation="10dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_weight="1"
-            android:text="Curso"
-            android:textColor="@color/white"
-            android:textSize="17sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:id="@+id/imageView14"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_margin="5dp"
-            android:src="@drawable/atras" />
-
-
-    </LinearLayout>
-
-    <ScrollView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content">
-
-    </ScrollView>
-
-    <LinearLayout
-        android:id="@+id/contenido"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="250dp"
-        android:gravity="center"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView41"
+        <LinearLayout
+            android:id="@+id/barraSuperior"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_weight="0"
-            android:gravity="center"
-            android:text="Titulo del Curso"
-            android:textColor="@color/colorButtonPrincipal" />
+            android:background="@drawable/gradient_register"
+            android:elevation="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-        <TextView
+            <TextView
+                android:id="@+id/titleCurso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Titulo del Curso"
+                android:textColor="@color/colorButtonPrincipal"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/backModalCurso"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="5dp"
+                app:srcCompat="@drawable/atras" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contenido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_weight="0"
+            android:background="@drawable/gradient"
             android:gravity="center"
-            android:text="Con un fuerte énfasis en la experiencia en obra y el trabajo con la comunidad, la Escuela de Arquitectura de la U. de Talca, busca formar profesionales que respondan a los desafíos y cambios culturales de la actualidad."
-            android:textColor="@color/colorWhite" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/aceptar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/decriCurso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="30dp"
+                android:layout_weight="0"
+                android:gravity="center"
+                android:text="Con un fuerte énfasis en la experiencia en obra y el trabajo con la comunidad, la Escuela de Arquitectura de la U. de Talca, busca formar profesionales que respondan a los desafíos y cambios culturales de la actualidad."
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
 
-        <ImageView
-            android:id="@+id/imgCursos"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:layout_weight="1"
-            android:src="@drawable/arquitectura" />
+            <ImageView
+                android:id="@+id/imgCursos"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/arquitectura" />
 
-        <Button
-            android:id="@+id/button9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:paddingLeft="40dp"
-            android:paddingTop="10dp"
-            android:paddingRight="40dp"
-            android:paddingBottom="10dp"
-            android:text="Formulario de Registro"
-            android:textColor="@color/colorButtonPrincipal" />
+            <Button
+                android:id="@+id/salir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_weight="0"
+                android:elevation="20dp"
+                android:paddingLeft="40dp"
+                android:paddingTop="10dp"
+                android:paddingRight="40dp"
+                android:paddingBottom="10dp"
+                android:text="Formulario de Registro"
+                android:textColor="@color/colorButtonPrincipal" />
 
+        </LinearLayout>
     </LinearLayout>
-
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
